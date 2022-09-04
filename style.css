@@ -1,0 +1,230 @@
+body {
+  background-color: #ccc;
+}
+.header {
+  margin-top: 2em;
+  text-align: center;
+  font-style: italic;
+  font-weight: 800;
+  font-stretch: expanded;
+  background-color: #ddd;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  line-height: 25px;
+}
+#para {
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  color: red;
+  font-weight: 800;
+}
+#playing {
+  display: none;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  margin-bottom: 1em;
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: relative;
+  -webkit-box-reflect: below -10px linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+#playing span {
+  font-family: "Alfa Slab One", cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  animation: waviy 4s infinite;
+  animation-delay: calc(0.3s * var(--i));
+}
+
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+}
+
+.choosePlayer {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2em;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+#PlayerVsPlayer {
+  font-size: 20px;
+  padding: 15px;
+  background-color: blue;
+  border-radius: 10px;
+  color: white;
+  font-weight: 900;
+  font-style: oblique;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+#reset {
+  font-size: 20px;
+  padding: 15px;
+  background-color: blue;
+  border-radius: 10px;
+  color: white;
+  font-weight: 900;
+  font-style: oblique;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+#PlayerVsComputerAi {
+  font-size: 20px;
+  padding: 15px;
+  background-color: blue;
+  border-radius: 10px;
+  color: white;
+  font-weight: 900;
+  font-style: oblique;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+#PlayerVsPlayer:hover {
+  cursor: pointer;
+}
+#PlayerVsComputerAi:hover {
+  cursor: pointer;
+}
+#reset:hover {
+  cursor: pointer;
+}
+#boardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: blueviolet;
+  height: 30rem;
+  width: 30rem;
+  margin: auto;
+  border-radius: 10px;
+}
+#boardContainer > #marker0 {
+  font-size: 5em;
+  text-align: center;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+#boardContainer > #marker1 {
+  font-size: 5em;
+  text-align: center;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+#boardContainer > #marker2 {
+  font-size: 5em;
+  text-align: center;
+  border-bottom: 5px solid black;
+}
+#boardContainer > #marker3 {
+  font-size: 5em;
+  text-align: center;
+  border-right: 5px solid black;
+}
+#boardContainer > #marker4 {
+  font-size: 5em;
+  text-align: center;
+  border-right: 5px solid black;
+}
+#boardContainer > #marker5 {
+  font-size: 5em;
+  text-align: center;
+}
+#boardContainer > #marker6 {
+  font-size: 5em;
+  text-align: center;
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+}
+#boardContainer > #marker7 {
+  font-size: 5em;
+  text-align: center;
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+}
+#boardContainer > #marker8 {
+  font-size: 5em;
+  text-align: center;
+  border-top: 5px solid black;
+}
+
+/* hove effect */
+#marker0:hover {
+  cursor: pointer;
+  background-color: rgb(245, 241, 241);
+  border-top-left-radius: 10px;
+}
+#marker1:hover {
+  cursor: pointer;
+  background-color: rgb(245, 241, 241);
+}
+#marker2:hover {
+  cursor: pointer;
+  background-color: rgb(245, 241, 241);
+  border-top-right-radius: 10px;
+}
+#marker3:hover {
+  cursor: pointer;
+  background-color: rgb(245, 241, 241);
+}
+#marker4:hover {
+  cursor: pointer;
+  background-color: rgb(245, 241, 241);
+}
+#marker5:hover {
+  cursor: pointer;
+  background-color: rgb(245, 241, 241);
+}
+#marker6:hover {
+  cursor: pointer;
+  background-color: rgb(245, 241, 241);
+  border-bottom-left-radius: 10px;
+}
+#marker7:hover {
+  cursor: pointer;
+  background-color: rgb(245, 241, 241);
+}
+#marker8:hover {
+  cursor: pointer;
+  background-color: rgb(245, 241, 241);
+  border-bottom-right-radius: 10px;
+}
+
+h3 {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  line-height: 25px;
+  text-align: center;
+  justify-content: center;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  #playing{
+    font-size: 20px;
+    margin-left: 20%;
+  }
+  #header{
+    width: fit-content;
+    margin: 20%;
+  }
+  #h3{
+    width: fit-content;
+    margin-left: 20%;
+  }
+}
